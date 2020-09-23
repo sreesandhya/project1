@@ -216,39 +216,5 @@
   <prerequisites>
     <maven>3.0.3</maven>
   </prerequisites>
-  <dependencies>
-    <dependency>
-      <groupId>org.sonarsource.sonarqube</groupId>
-      <artifactId>sonar-plugin-api</artifactId>
-      <!-- minimal version of SonarQube to support. -->
-      <version>6.7</version>
-      <!-- mandatory scope -->
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
-       <plugins>
-      <plugin>
-        <groupId>org.sonarsource.sonar-packaging-maven-plugin</groupId>
-        <artifactId>sonar-packaging-maven-plugin</artifactId>
-        <version>1.18.0.372</version>
-        <extensions>true</extensions>
-        <configuration>
-          <!-- the entry-point class that extends org.sonar.api.SonarPlugin -->
-          <pluginClass>com.mycompany.sonar.reference.ExamplePlugin</pluginClass>         
-          <!-- advanced properties can be set here. See paragraph "Advanced Build Properties". -->
-        </configuration>
-      </plugin>
-    </plugins>
-    <profile>
-          <id>sonar</id>
-          <activation>
-            <activeByDefault>true</activeByDefault>
-          </activation>
-          <properties>
-            <!-- Optional value. Default value is http://localhost:9000 -->
-            <sonar.host.url>
-             http://192.168.145.138:9000
-            </sonar.host.url>
-          </properties>
-  </profile>   
+  
 </project>
